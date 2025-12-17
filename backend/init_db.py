@@ -17,11 +17,11 @@ def seed_sample_data():
         
         # Sample users
         users = [
-            ('jsmith', 'john.smith@pharma.com', 'khadija ali', 'QA Manager', 'Quality Assurance'),
-            ('mjohnson', 'mary.johnson@pharma.com', 'mohamed mostafa', 'Production Manager', 'Production'),
-            ('rdavis', 'robert.davis@pharma.com', 'hamza ayman', 'QC Analyst', 'Quality Control'),
-            ('swilson', 'sarah.wilson@pharma.com', 'caroline ehab', 'Regulatory Affairs', 'Regulatory'),
-            ('tbrown', 'thomas.brown@pharma.com', 'yasmeen elfeky', 'Manufacturing Supervisor', 'Production')
+            ('jsmith', 'john.smith@pharma.com', 'Khadija Ali', 'QA Manager', 'Quality Assurance'),
+            ('mjohnson', 'mary.johnson@pharma.com', 'Mohamed Mostafa', 'Production Manager', 'Production'),
+            ('rdavis', 'robert.davis@pharma.com', 'Hamza Ayman', 'QC Analyst', 'Quality Control'),
+            ('swilson', 'sarah.wilson@pharma.com', 'Caroline Ehab', 'Regulatory Affairs', 'Regulatory'),
+            ('tbrown', 'thomas.brown@pharma.com', 'Yasmeen Elfeky', 'Manufacturing Supervisor', 'Production')
         ]
         
         cursor.executemany('''

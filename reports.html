@@ -375,7 +375,9 @@
                 <h4>📊 Executive Summary</h4>
                 <p>High-level overview of quality metrics and KPIs for management review</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"><a href="https://www.canva.com/documents/templates/executive-summaries/" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"><a
+                            href="https://www.canva.com/documents/templates/executive-summaries/" target="_blank"
+                            style="color: white;">Template</a></span>
                 </div>
             </div>
 
@@ -383,7 +385,9 @@
                 <h4>📋 Regulatory Submission</h4>
                 <p>Comprehensive report format for regulatory authority submissions</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"> <a href="https://www.larksuite.com/en_us/templates/regulatory-submission-tracker" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"> <a
+                            href="https://www.larksuite.com/en_us/templates/regulatory-submission-tracker"
+                            target="_blank" style="color: white;">Template</a></span>
                 </div>
             </div>
 
@@ -391,7 +395,9 @@
                 <h4>🔍 Investigation Report</h4>
                 <p>Detailed investigation template with root cause analysis and CAPA</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"><a href="https://www.acas.org.uk/investigation-plan-and-report-templates" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"><a
+                            href="https://www.acas.org.uk/investigation-plan-and-report-templates" target="_blank"
+                            style="color: white;">Template</a></span>
                 </div>
             </div>
 
@@ -399,7 +405,8 @@
                 <h4>📈 Trend Analysis</h4>
                 <p>Statistical trend analysis with charts and predictive insights</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"><a href="https://www.template.net/analysis" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"><a href="https://www.template.net/analysis" target="_blank"
+                            style="color: white;">Template</a></span>
                 </div>
             </div>
 
@@ -407,7 +414,8 @@
                 <h4>✅ Compliance Checklist</h4>
                 <p>GMP compliance verification and audit readiness assessment</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"><a href="https://www.template.net/checklists/compliance" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"><a href="https://www.template.net/checklists/compliance"
+                            target="_blank" style="color: white;">Template</a></span>
                 </div>
             </div>
 
@@ -415,7 +423,9 @@
                 <h4>📦 Batch Release</h4>
                 <p>Complete batch release documentation with all quality data</p>
                 <div class="mt-3">
-                    <span class="badge badge-info"><a href="https://www.meegle.com/en_us/advanced-templates/traceability_management/batch_release_authorization_template" target="_blank" style="color: white;">Template</a></span>
+                    <span class="badge badge-info"><a
+                            href="https://www.meegle.com/en_us/advanced-templates/traceability_management/batch_release_authorization_template"
+                            target="_blank" style="color: white;">Template</a></span>
                 </div>
             </div>
         </div>
@@ -557,10 +567,35 @@
                     const row = document.createElement('tr');
                     const generatedDate = new Date(report.generated_at).toLocaleDateString();
 
+                    // Parse parameters - handle double-encoded JSON
+                    let params = {};
+                    try {
+                        params = JSON.parse(report.parameters || '{}');
+                        // If params is still a string, parse again (double-encoded)
+                        if (typeof params === 'string') {
+                            params = JSON.parse(params);
+                        }
+                    } catch (e) {
+                        params = {};
+                    }
+
+                    // Format period for display
+                    const periodMap = {
+                        'current-month': 'Current Month',
+                        'last-month': 'Last Month',
+                        'quarter': 'Current Quarter',
+                        'last-quarter': 'Last Quarter',
+                        'ytd': 'Year to Date',
+                        'last-year': 'Last Year',
+                        'monthly': 'Monthly',
+                        'custom': 'Custom Range'
+                    };
+                    const period = periodMap[params.period] || params.period || 'N/A';
+
                     row.innerHTML = `
                         <td><strong>${report.title}</strong></td>
                         <td>${report.report_type}</td>
-                        <td>${JSON.parse(report.parameters || '{}').period || 'N/A'}</td>
+                        <td>${period}</td>
                         <td>${report.generated_by_name || 'System'}</td>
                         <td>${generatedDate}</td>
                         <td>
