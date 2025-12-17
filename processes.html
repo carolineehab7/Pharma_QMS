@@ -62,7 +62,6 @@
         <!-- Document Control -->
         <div class="card mb-4" id="document-control">
             <div class="card-header">
-                <div class="card-icon">📋</div>
                 <div>
                     <h3 class="card-title">Document Control</h3>
                     <span class="badge badge-primary">Critical Process</span>
@@ -114,7 +113,6 @@
         <!-- Change Control -->
         <div class="card mb-4" id="change-control">
             <div class="card-header">
-                <div class="card-icon">🔄</div>
                 <div>
                     <h3 class="card-title">Change Control</h3>
                     <span class="badge badge-warning">High Impact</span>
@@ -178,7 +176,6 @@
         <!-- Deviation Management -->
         <div class="card mb-4" id="deviation-management">
             <div class="card-header">
-                <div class="card-icon">⚠️</div>
                 <div>
                     <h3 class="card-title">Deviation Management</h3>
                     <span class="badge badge-danger">Critical Process</span>
@@ -234,10 +231,141 @@
             </div>
         </div>
 
+        <!-- Quality Policy & Management Commitment -->
+        <div class="card mb-4" id="quality-policy">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Quality Policy & Management Commitment</h3>
+                    <span class="badge badge-primary">Leadership</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>The Quality Policy defines the organization's commitment to product quality, regulatory compliance,
+                    and continual improvement. Management commitment ensures resources, objectives, and culture are
+                    aligned with the policy.</p>
+
+                <h4 class="mt-3">Key Elements</h4>
+                <ul>
+                    <li>Clear, communicated quality policy and measurable objectives</li>
+                    <li>Top-management review meetings and defined responsibilities</li>
+                    <li>Resource allocation for training, equipment, and improvement</li>
+                    <li>Periodic management review and policy updates</li>
+                </ul>
+
+                <p class="mt-3">If you identify a deviation related to the quality policy or management commitment,
+                    record it in the <a href="deviation-management.html">Deviation & CAPA</a> system.</p>
+            </div>
+        </div>
+
+        <!-- Production & Process Control -->
+        <div class="card mb-4" id="production-process-control">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Production & Process Control</h3>
+                    <span class="badge badge-warning">Operational</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Production & Process Control covers the design, operation, monitoring, and control of manufacturing
+                    processes to ensure consistent product quality.</p>
+
+                <h4 class="mt-3">Key Components</h4>
+                <ul>
+                    <li>Process parameters, in-process controls and monitoring</li>
+                    <li>Operating procedures (SOPs) and work instructions</li>
+                    <li>Change control and validation for process changes</li>
+                    <li>Equipment maintenance and calibration</li>
+                </ul>
+
+                <p class="mt-3">Deviations related to production or process controls should be submitted via
+                    the <a href="deviation-management.html">Deviation & CAPA</a> page for investigation and CAPA.</p>
+            </div>
+        </div>
+
+        <!-- Validation -->
+        <div class="card mb-4" id="validation">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Validation</h3>
+                    <span class="badge badge-danger">Critical Process</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Validation provides documented evidence that systems, processes, and equipment consistently perform
+                    according to predetermined specifications and quality attributes.</p>
+
+                <h4 class="mt-3">Key Components</h4>
+                <ul>
+                    <li><strong>Validation Master Plan (VMP):</strong> Overall validation strategy</li>
+                    <li><strong>Equipment Validation:</strong> IQ, OQ, PQ activities</li>
+                    <li><strong>Process Validation:</strong> Proven process consistency</li>
+                    <li><strong>Computer System Validation (CSV):</strong> Validated electronic systems</li>
+                    <li><strong>Change Control & Revalidation:</strong> Impact assessment of changes</li>
+                </ul>
+
+                <h4 class="mt-3">Process Flow</h4>
+                <p>Validation Planning → Risk Assessment → Installation Qualification (IQ) → Operational Qualification
+                    (OQ) → Performance Qualification (PQ) → Validation Report & Approval</p>
+
+                <h4 class="mt-3">Compliance Requirements</h4>
+                <div class="grid grid-2 mt-2">
+                    <div class="alert alert-info">
+                        <strong>FDA Process Validation Guidance</strong>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>EU GMP Annex 15</strong>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>GAMP 5</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Internal Audits -->
+        <div class="card mb-4" id="internal-audits">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Internal Audits</h3>
+                    <span class="badge badge-warning">Assurance</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Internal Audits evaluate the effectiveness and compliance of the Quality Management System by
+                    identifying gaps, risks, and opportunities for improvement.</p>
+
+                <h4 class="mt-3">Key Components</h4>
+                <ul>
+                    <li><strong>Audit Program:</strong> Risk-based audit planning</li>
+                    <li><strong>Audit Execution:</strong> Independent and trained auditors</li>
+                    <li><strong>Findings Classification:</strong> Critical, major, minor observations</li>
+                    <li><strong>CAPA Management:</strong> Corrective and preventive actions</li>
+                    <li><strong>Follow-Up:</strong> Verification of CAPA effectiveness</li>
+                </ul>
+
+                <h4 class="mt-3">Process Flow</h4>
+                <p>Audit Planning → Audit Preparation → Audit Execution → Audit Report → CAPA Implementation → Audit
+                    Closure</p>
+
+                <h4 class="mt-3">Compliance Requirements</h4>
+                <div class="grid grid-2 mt-2">
+                    <div class="alert alert-info">
+                        <strong>ICH Q10: Self-Inspection</strong>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>ISO 19011: Auditing Guidelines</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Quality Control Testing -->
         <div class="card mb-4" id="quality-control">
             <div class="card-header">
-                <div class="card-icon">🧪</div>
                 <div>
                     <h3 class="card-title">Quality Control Testing</h3>
                     <span class="badge badge-success">Core Process</span>
@@ -289,7 +417,6 @@
         <!-- Batch Record Review -->
         <div class="card mb-4" id="batch-review">
             <div class="card-header">
-                <div class="card-icon">📊</div>
                 <div>
                     <h3 class="card-title">Batch Record Review</h3>
                     <span class="badge badge-primary">GMP Critical</span>
@@ -334,7 +461,6 @@
         <!-- Supplier Qualification -->
         <div class="card mb-4" id="supplier-qualification">
             <div class="card-header">
-                <div class="card-icon">🤝</div>
                 <div>
                     <h3 class="card-title">Supplier Qualification</h3>
                     <span class="badge badge-info">Supply Chain</span>
@@ -371,7 +497,6 @@
         <!-- Training Management -->
         <div class="card mb-4" id="training">
             <div class="card-header">
-                <div class="card-icon">🎓</div>
                 <div>
                     <h3 class="card-title">Training Management</h3>
                     <span class="badge badge-success">Personnel Development</span>
@@ -412,7 +537,6 @@
         <!-- Equipment Qualification -->
         <div class="card mb-4" id="equipment-qualification">
             <div class="card-header">
-                <div class="card-icon">⚙️</div>
                 <div>
                     <h3 class="card-title">Equipment Qualification</h3>
                     <span class="badge badge-primary">Validation</span>
