@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Management Dashboard - Real-time Metrics and Analytics">
+    <title>QMS Dashboard | Pharmaceutical QMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="processes.html" class="nav-link">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 2rem 1.5rem;">
+        <div class="hero-content">
+            <h1>📊 Quality Management Dashboard</h1>
+            <p>Real-time metrics, KPIs, and analytics for proactive quality management</p>
+        </div>
+    </section>
+
+    <!-- Key Performance Indicators -->
+    <section class="container">
+        <h2 class="mb-3">Key Performance Indicators</h2>
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">98.5%</div>
+                <div class="stat-label">First Pass Yield</div>
+                <div class="stat-trend trend-up">↑ 2.3% from last month</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">97.5%</div>
+                <div class="stat-label">Right First Time</div>
+                <div class="stat-trend trend-up">↑ 1.8% from last month</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--warning);">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Active Deviations</div>
+                <div class="stat-trend trend-down">↓ 5 from last month</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">95%</div>
+                <div class="stat-label">CAPA On-Time Closure</div>
+                <div class="stat-trend trend-up">↑ 8% from last month</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--info);">
+                <div class="stat-value">3</div>
+                <div class="stat-label">OOS Investigations</div>
+                <div class="stat-trend">Active</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Training Compliance</div>
+                <div class="stat-trend trend-up">Maintained</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">156</div>
+                <div class="stat-label">Batches Released (MTD)</div>
+                <div class="stat-trend trend-up">↑ 12% from last month</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--info);">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Change Controls Open</div>
+                <div class="stat-trend">In Progress</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Metrics -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <h2 class="mb-3">Production Metrics</h2>
+            <div class="grid grid-2">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Monthly Production Output</h3>
+                        <div class="chart-controls">
+                            <select class="form-select" style="width: auto; padding: 0.5rem;">
+                                <option>Last 6 Months</option>
+                                <option>Last 12 Months</option>
+                                <option>YTD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <canvas id="productionChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">First Pass Yield Trend</h3>
+                    </div>
+                    <canvas id="fpyChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Batch Status Distribution</h3>
+                    </div>
+                    <canvas id="batchStatusChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Production by Product Line</h3>
+                    </div>
+                    <canvas id="productLineChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Metrics -->
+    <section class="container">
+        <h2 class="mb-3">Quality Metrics</h2>
+        <div class="grid grid-2">
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Deviation Trends</h3>
+                </div>
+                <canvas id="deviationTrendChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">CAPA Effectiveness</h3>
+                </div>
+                <canvas id="capaEffectivenessChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">OOS/OOT Investigations</h3>
+                </div>
+                <canvas id="oosChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Quality Control Test Results</h3>
+                </div>
+                <canvas id="qcResultsChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Dashboard -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="mb-3">Compliance Status</h2>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4>Document Control</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Documents Under Review</span>
+                            <strong>5</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Pending Approval</span>
+                            <strong>3</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Overdue Reviews</span>
+                            <strong class="text-danger">0</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-success">100% Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Training Compliance</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Qualified Personnel</span>
+                            <strong>245/245</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Training Due This Month</span>
+                            <strong>12</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Overdue Training</span>
+                            <strong class="text-success">0</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-success">100% Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Equipment Qualification</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Qualified Equipment</span>
+                            <strong>98/100</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Calibration Due</span>
+                            <strong>5</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Overdue Calibration</span>
+                            <strong class="text-warning">2</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-warning">Action Required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <h3>Audit Findings Tracker</h3>
+                <div class="table-container mt-3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Audit Type</th>
+                                <th>Date</th>
+                                <th>Findings</th>
+                                <th>Critical</th>
+                                <th>Major</th>
+                                <th>Minor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Internal GMP</td>
+                                <td>Nov 15, 2024</td>
+                                <td>8</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td><span class="badge badge-warning">CAPA In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>ISO Surveillance</td>
+                                <td>Aug 22, 2024</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td><span class="badge badge-success">Closed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Supplier Audit</td>
+                                <td>Oct 10, 2024</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td><span class="badge badge-success">Closed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="container">
+        <h2 class="mb-3">Recent Activity</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h4>Latest Deviations</h4>
+                <div class="mt-3">
+                    <div class="mb-3" style="border-left: 3px solid var(--warning); padding-left: 1rem;">
+                        <strong>DEV-2024-092</strong> - Equipment malfunction<br>
+                        <small style="color: var(--gray-600);">Production | 2 hours ago</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--info); padding-left: 1rem;">
+                        <strong>DEV-2024-091</strong> - Documentation error<br>
+                        <small style="color: var(--gray-600);">QA | 5 hours ago</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--info); padding-left: 1rem;">
+                        <strong>DEV-2024-090</strong> - Material variance<br>
+                        <small style="color: var(--gray-600);">QC | 1 day ago</small>
+                    </div>
+                </div>
+                <a href="deviation-management.html" class="btn btn-outline">View All →</a>
+            </div>
+
+            <div class="card">
+                <h4>Upcoming Deadlines</h4>
+                <div class="mt-3">
+                    <div class="mb-3" style="border-left: 3px solid var(--danger); padding-left: 1rem;">
+                        <strong>CAPA-2024-015</strong> - Due in 2 days<br>
+                        <small style="color: var(--gray-600);">Corrective action implementation</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--warning); padding-left: 1rem;">
+                        <strong>CC-2024-028</strong> - Due in 5 days<br>
+                        <small style="color: var(--gray-600);">Change control approval</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--info); padding-left: 1rem;">
+                        <strong>DOC-2024-156</strong> - Due in 7 days<br>
+                        <small style="color: var(--gray-600);">Document review</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="standards.html#gmp">GMP Compliance</a></li>
+                    <li><a href="standards.html#fda">FDA Regulations</a></li>
+                    <li><a href="standards.html#iso">ISO Standards</a></li>
+                    <li><a href="standards.html#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Production Chart
+            new Chart(document.getElementById('productionChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Batches Produced',
+                        data: [142, 156, 148, 165, 152, 156],
+                        backgroundColor: chartColors.primary
+                    }]
+                },
+                options: chartDefaults
+            });
+
+            // FPY Chart
+            new Chart(document.getElementById('fpyChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'First Pass Yield %',
+                        data: [96.2, 97.1, 96.8, 97.5, 98.1, 98.5],
+                        borderColor: chartColors.success,
+                        backgroundColor: 'rgba(0, 200, 83, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { beginAtZero: false, min: 90, max: 100 } }
+                }
+            });
+
+            // Batch Status Chart
+            new Chart(document.getElementById('batchStatusChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Released', 'In Production', 'QC Testing', 'On Hold'],
+                    datasets: [{
+                        data: [142, 8, 5, 1],
+                        backgroundColor: [chartColors.success, chartColors.primary, chartColors.warning, chartColors.danger]
+                    }]
+                },
+                options: chartDefaults
+            });
+
+            // Product Line Chart
+            new Chart(document.getElementById('productLineChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Tablets', 'Capsules', 'Injectables', 'Liquids', 'Topicals'],
+                    datasets: [{
+                        label: 'Batches',
+                        data: [65, 42, 28, 15, 6],
+                        backgroundColor: [chartColors.primary, chartColors.secondary, chartColors.success, chartColors.warning, chartColors.purple]
+                    }]
+                },
+                options: { ...chartDefaults, indexAxis: 'y' }
+            });
+
+            // Deviation Trend Chart
+            new Chart(document.getElementById('deviationTrendChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Total Deviations',
+                        data: [28, 25, 22, 19, 15, 12],
+                        borderColor: chartColors.danger,
+                        backgroundColor: 'rgba(229, 57, 53, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: chartDefaults
+            });
+
+            // CAPA Effectiveness Chart
+            new Chart(document.getElementById('capaEffectivenessChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'On-Time Closure %',
+                        data: [70, 75, 82, 88, 92, 95],
+                        backgroundColor: chartColors.success
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { beginAtZero: true, max: 100 } }
+                }
+            });
+
+            // OOS Chart
+            new Chart(document.getElementById('oosChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'OOS',
+                        data: [5, 4, 3, 2, 3, 2],
+                        backgroundColor: chartColors.danger
+                    }, {
+                        label: 'OOT',
+                        data: [3, 2, 4, 2, 1, 1],
+                        backgroundColor: chartColors.warning
+                    }]
+                },
+                options: chartDefaults
+            });
+
+            // QC Results Chart
+            new Chart(document.getElementById('qcResultsChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Pass', 'Fail', 'Retest'],
+                    datasets: [{
+                        data: [1245, 15, 8],
+                        backgroundColor: [chartColors.success, chartColors.danger, chartColors.warning]
+                    }]
+                },
+                options: chartDefaults
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Management Reports and Analytics">
+    <title>Reports | Pharmaceutical QMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="processes.html" class="nav-link">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link active">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 2rem 1.5rem;">
+        <div class="hero-content">
+            <h1>📄 Quality Management Reports</h1>
+            <p>Comprehensive reporting and analytics for compliance and continuous improvement</p>
+        </div>
+    </section>
+
+    <!-- Report Categories -->
+    <section class="container">
+        <h2 class="mb-3">Report Categories</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h4>Quality Metrics</h4>
+                <p>KPI reports, trend analysis, and performance metrics</p>
+                <ul class="mt-2">
+                    <li>First Pass Yield Report</li>
+                    <li>Right First Time Analysis</li>
+                    <li>Quality Cost Report</li>
+                    <li>Batch Release Summary</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚠️</div>
+                <h4>Deviation Reports</h4>
+                <p>Deviation summaries, trends, and CAPA effectiveness</p>
+                <ul class="mt-2">
+                    <li>Deviation Summary Report</li>
+                    <li>CAPA Status Report</li>
+                    <li>Root Cause Analysis</li>
+                    <li>Recurring Deviation Report</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h4>Audit Reports</h4>
+                <p>Internal and external audit findings and responses</p>
+                <ul class="mt-2">
+                    <li>Audit Findings Summary</li>
+                    <li>CAPA Closure Report</li>
+                    <li>Compliance Status Report</li>
+                    <li>Regulatory Inspection Report</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h4>Production Reports</h4>
+                <p>Batch records, production summaries, and yield analysis</p>
+                <ul class="mt-2">
+                    <li>Batch Production Report</li>
+                    <li>Material Reconciliation</li>
+                    <li>Production Efficiency</li>
+                    <li>Equipment Utilization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧪</div>
+                <h4>Laboratory Reports</h4>
+                <p>QC test results, OOS investigations, and stability data</p>
+                <ul class="mt-2">
+                    <li>QC Test Results Summary</li>
+                    <li>OOS/OOT Investigation Report</li>
+                    <li>Stability Study Report</li>
+                    <li>Method Validation Report</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h4>Training Reports</h4>
+                <p>Training compliance, competency assessments, and records</p>
+                <ul class="mt-2">
+                    <li>Training Compliance Report</li>
+                    <li>Competency Assessment</li>
+                    <li>Training Effectiveness</li>
+                    <li>Personnel Qualification</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Generator -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <h2 class="mb-3">Custom Report Generator</h2>
+
+            <div class="card">
+                <h3>Generate Custom Report</h3>
+                <p>Select parameters to generate a customized quality management report</p>
+
+                <form id="reportForm" class="mt-4">
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Report Type *</label>
+                            <select class="form-select" id="reportType" required>
+                                <option value="">Select Report Type</option>
+                                <option value="quality-metrics">Quality Metrics Report</option>
+                                <option value="deviation-summary">Deviation Summary Report</option>
+                                <option value="capa-status">CAPA Status Report</option>
+                                <option value="batch-production">Batch Production Report</option>
+                                <option value="audit-findings">Audit Findings Report</option>
+                                <option value="training-compliance">Training Compliance Report</option>
+                                <option value="environmental-monitoring">Environmental Monitoring Report</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Time Period *</label>
+                            <select class="form-select" id="timePeriod" required>
+                                <option value="">Select Time Period</option>
+                                <option value="current-month">Current Month</option>
+                                <option value="last-month">Last Month</option>
+                                <option value="quarter">Current Quarter</option>
+                                <option value="last-quarter">Last Quarter</option>
+                                <option value="ytd">Year to Date</option>
+                                <option value="last-year">Last Year</option>
+                                <option value="custom">Custom Date Range</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2" id="customDateRange" style="display: none;">
+                        <div class="form-group">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" class="form-input" id="startDate">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">End Date</label>
+                            <input type="date" class="form-input" id="endDate">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Department/Area</label>
+                        <select class="form-select" id="department">
+                            <option value="all">All Departments</option>
+                            <option value="production">Production</option>
+                            <option value="qc">Quality Control</option>
+                            <option value="qa">Quality Assurance</option>
+                            <option value="warehouse">Warehouse</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="rd">R&D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Output Format *</label>
+                        <div class="flex gap-2 mt-2">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="format" value="pdf" checked>
+                                <span>PDF</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="format" value="excel">
+                                <span>Excel</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="format" value="csv">
+                                <span>CSV</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">Generate Report</button>
+                        <button type="reset" class="btn btn-outline">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Reports -->
+    <section class="container">
+        <h2 class="mb-3">Recent Reports</h2>
+
+        <div class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report Name</th>
+                            <th>Type</th>
+                            <th>Period</th>
+                            <th>Generated By</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Monthly Quality Metrics - December 2024</strong></td>
+                            <td>Quality Metrics</td>
+                            <td>Dec 2024</td>
+                            <td>System</td>
+                            <td>Dec 16, 2024</td>
+                            <td>
+                                <button class="btn btn-outline"
+                                    style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deviation Summary Report - Q4 2024</strong></td>
+                            <td>Deviation</td>
+                            <td>Q4 2024</td>
+                            <td>J. Smith</td>
+                            <td>Dec 15, 2024</td>
+                            <td>
+                                <button class="btn btn-outline"
+                                    style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAPA Effectiveness Report - November 2024</strong></td>
+                            <td>CAPA</td>
+                            <td>Nov 2024</td>
+                            <td>M. Johnson</td>
+                            <td>Dec 10, 2024</td>
+                            <td>
+                                <button class="btn btn-outline"
+                                    style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internal Audit Findings - November 2024</strong></td>
+                            <td>Audit</td>
+                            <td>Nov 2024</td>
+                            <td>R. Williams</td>
+                            <td>Dec 5, 2024</td>
+                            <td>
+                                <button class="btn btn-outline"
+                                    style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Training Compliance Report - Q4 2024</strong></td>
+                            <td>Training</td>
+                            <td>Q4 2024</td>
+                            <td>K. Brown</td>
+                            <td>Dec 1, 2024</td>
+                            <td>
+                                <button class="btn btn-outline"
+                                    style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Download</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduled Reports -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="mb-3">Scheduled Reports</h2>
+
+            <div class="card">
+                <h3>Automated Report Schedule</h3>
+                <p>Configure automatic report generation and distribution</p>
+
+                <div class="table-container mt-3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Frequency</th>
+                                <th>Recipients</th>
+                                <th>Next Run</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monthly Quality Metrics</strong></td>
+                                <td>Monthly (1st of month)</td>
+                                <td>QA Team, Management</td>
+                                <td>Jan 1, 2025</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Weekly Deviation Summary</strong></td>
+                                <td>Weekly (Monday)</td>
+                                <td>QA Manager</td>
+                                <td>Dec 23, 2024</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Quarterly Audit Report</strong></td>
+                                <td>Quarterly</td>
+                                <td>Management, Regulatory</td>
+                                <td>Jan 15, 2025</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary">Add New Schedule</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Templates -->
+    <section class="container">
+        <h2 class="mb-3">Report Templates</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h4>📊 Executive Summary</h4>
+                <p>High-level overview of quality metrics and KPIs for management review</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>📋 Regulatory Submission</h4>
+                <p>Comprehensive report format for regulatory authority submissions</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>🔍 Investigation Report</h4>
+                <p>Detailed investigation template with root cause analysis and CAPA</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>📈 Trend Analysis</h4>
+                <p>Statistical trend analysis with charts and predictive insights</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>✅ Compliance Checklist</h4>
+                <p>GMP compliance verification and audit readiness assessment</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>📦 Batch Release</h4>
+                <p>Complete batch release documentation with all quality data</p>
+                <div class="mt-3">
+                    <span class="badge badge-info">Template</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="standards.html#gmp">GMP Compliance</a></li>
+                    <li><a href="standards.html#fda">FDA Regulations</a></li>
+                    <li><a href="standards.html#iso">ISO Standards</a></li>
+                    <li><a href="standards.html#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="api-client.js"></script>
+    <script>
+        // Show/hide custom date range
+        document.getElementById('timePeriod').addEventListener('change', function () {
+            const customDateRange = document.getElementById('customDateRange');
+            if (this.value === 'custom') {
+                customDateRange.style.display = 'grid';
+            } else {
+                customDateRange.style.display = 'none';
+            }
+        });
+
+        // Report form submission - Save to Database
+        document.getElementById('reportForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const reportType = document.getElementById('reportType').value;
+            const timePeriod = document.getElementById('timePeriod').value;
+            const department = document.getElementById('department').value;
+            const format = document.querySelector('input[name="format"]:checked').value;
+
+            // Get custom dates if applicable
+            let startDate = null;
+            let endDate = null;
+            if (timePeriod === 'custom') {
+                startDate = document.getElementById('startDate').value;
+                endDate = document.getElementById('endDate').value;
+            }
+
+            // Create report title
+            const reportTypeNames = {
+                'quality-metrics': 'Quality Metrics',
+                'deviation-summary': 'Deviation Summary',
+                'capa-status': 'CAPA Status',
+                'batch-production': 'Batch Production',
+                'audit-findings': 'Audit Findings',
+                'training-compliance': 'Training Compliance',
+                'environmental-monitoring': 'Environmental Monitoring'
+            };
+
+            const title = `${reportTypeNames[reportType]} Report - ${new Date().toLocaleDateString()}`;
+
+            const reportData = {
+                report_type: reportTypeNames[reportType],
+                title: title,
+                description: `${reportTypeNames[reportType]} report for ${timePeriod}`,
+                parameters: JSON.stringify({
+                    period: timePeriod,
+                    department: department,
+                    format: format,
+                    startDate: startDate,
+                    endDate: endDate
+                }),
+                file_format: format.toUpperCase(),
+                generated_by: 1  // Default user ID
+            };
+
+            try {
+                showNotification(`Generating ${reportTypeNames[reportType]} report...`, 'info');
+
+                // Save to database via API
+                const result = await ReportAPI.generate(reportData);
+
+                showNotification(`Report generated successfully! Report ID: ${result.id}`, 'success');
+
+                // Reload recent reports
+                loadRecentReports();
+
+                // Reset form
+                this.reset();
+                document.getElementById('customDateRange').style.display = 'none';
+
+            } catch (error) {
+                console.error('Error generating report:', error);
+                showNotification('Error generating report. Please ensure API server is running.', 'error');
+            }
+        });
+
+        // Load recent reports from database
+        async function loadRecentReports() {
+            try {
+                const reports = await ReportAPI.getAll();
+
+                const tbody = document.querySelector('table tbody');
+                tbody.innerHTML = ''; // Clear existing rows
+
+                // Show last 10 reports
+                reports.slice(0, 10).forEach(report => {
+                    const row = document.createElement('tr');
+                    const generatedDate = new Date(report.generated_at).toLocaleDateString();
+
+                    row.innerHTML = `
+                        <td><strong>${report.title}</strong></td>
+                        <td>${report.report_type}</td>
+                        <td>${JSON.parse(report.parameters || '{}').period || 'N/A'}</td>
+                        <td>${report.generated_by_name || 'System'}</td>
+                        <td>${generatedDate}</td>
+                        <td>
+                            <button class="btn btn-outline" 
+                                style="padding: 0.25rem 0.75rem; font-size: 0.875rem;"
+                                onclick="showNotification('Download functionality coming soon!', 'info')">
+                                Download
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+                if (reports.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" style="text-align: center;">No reports generated yet</td></tr>';
+                }
+
+            } catch (error) {
+                console.error('Error loading reports:', error);
+            }
+        }
+
+        // Load reports when page loads
+        document.addEventListener('DOMContentLoaded', loadRecentReports);
+    </script>
+</body>
+
+</html>

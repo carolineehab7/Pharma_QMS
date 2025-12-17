@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Environmental and Process Monitoring for Pharmaceutical Production">
+    <title>Monitoring | Pharmaceutical QMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="processes.html" class="nav-link">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link active">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 2rem 1.5rem;">
+        <div class="hero-content">
+            <h1>🌡️ Environmental & Process Monitoring</h1>
+            <p>Real-time monitoring of critical parameters for GMP compliance</p>
+        </div>
+    </section>
+
+    <!-- Current Status Overview -->
+    <section class="container">
+        <h2 class="mb-3">Current Status Overview</h2>
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">✓</div>
+                <div class="stat-label">All Systems Normal</div>
+                <div class="stat-trend" style="color: var(--success);">Last updated: 2 min ago</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">21.5°C</div>
+                <div class="stat-label">Clean Room Temperature</div>
+                <div class="stat-trend">Target: 20-24°C</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">45%</div>
+                <div class="stat-label">Relative Humidity</div>
+                <div class="stat-trend">Target: 35-55%</div>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--success);">
+                <div class="stat-value">+15 Pa</div>
+                <div class="stat-label">Differential Pressure</div>
+                <div class="stat-trend">Target: +10 to +20 Pa</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Room Monitoring -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <h2 class="mb-3">Clean Room Environmental Monitoring</h2>
+
+            <div class="grid grid-3 mb-4">
+                <div class="card">
+                    <h4>Grade A (ISO 5)</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Temperature</span>
+                            <strong style="color: var(--success);">21.2°C</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Humidity</span>
+                            <strong style="color: var(--success);">42%</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Pressure</span>
+                            <strong style="color: var(--success);">+18 Pa</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Particle Count</span>
+                            <strong style="color: var(--success);">Within Limits</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-success">Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Grade B (ISO 7)</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Temperature</span>
+                            <strong style="color: var(--success);">21.8°C</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Humidity</span>
+                            <strong style="color: var(--success);">46%</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Pressure</span>
+                            <strong style="color: var(--success);">+15 Pa</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Particle Count</span>
+                            <strong style="color: var(--success);">Within Limits</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-success">Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Grade C (ISO 8)</h4>
+                    <div class="mt-2">
+                        <div class="flex-between mb-2">
+                            <span>Temperature</span>
+                            <strong style="color: var(--success);">22.1°C</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Humidity</span>
+                            <strong style="color: var(--success);">48%</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Pressure</span>
+                            <strong style="color: var(--success);">+12 Pa</strong>
+                        </div>
+                        <div class="flex-between mb-2">
+                            <span>Particle Count</span>
+                            <strong style="color: var(--success);">Within Limits</strong>
+                        </div>
+                        <div class="mt-3">
+                            <span class="badge badge-success">Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Temperature Trend (24 Hours)</h3>
+                    </div>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Humidity Trend (24 Hours)</h3>
+                    </div>
+                    <canvas id="humidityChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Differential Pressure Trend</h3>
+                    </div>
+                    <canvas id="pressureChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Particle Count Monitoring</h3>
+                    </div>
+                    <canvas id="particleChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Monitoring -->
+    <section class="container">
+        <h2 class="mb-3">Critical Process Parameters (CPP)</h2>
+
+        <div class="card mb-4">
+            <h3>Active Production Lines</h3>
+            <div class="table-container mt-3">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Line</th>
+                            <th>Product</th>
+                            <th>Batch</th>
+                            <th>Temperature</th>
+                            <th>Pressure</th>
+                            <th>Speed</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Line 1</strong></td>
+                            <td>Tablet A</td>
+                            <td>BT-2024-156</td>
+                            <td style="color: var(--success);">65°C</td>
+                            <td style="color: var(--success);">2.5 bar</td>
+                            <td style="color: var(--success);">85%</td>
+                            <td><span class="badge badge-success">Running</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Line 2</strong></td>
+                            <td>Capsule B</td>
+                            <td>BT-2024-157</td>
+                            <td style="color: var(--success);">60°C</td>
+                            <td style="color: var(--success);">2.2 bar</td>
+                            <td style="color: var(--success);">90%</td>
+                            <td><span class="badge badge-success">Running</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Line 3</strong></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="badge badge-info">Idle</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Process Temperature Control</h3>
+                </div>
+                <canvas id="processTemperatureChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Equipment Utilization</h3>
+                </div>
+                <canvas id="utilizationChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Status -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="mb-3">Equipment Status & Calibration</h2>
+
+            <div class="card">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Equipment ID</th>
+                                <th>Equipment Name</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Last Calibration</th>
+                                <th>Next Calibration</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>EQ-001</strong></td>
+                                <td>Tablet Press #1</td>
+                                <td>Production Area A</td>
+                                <td><span class="badge badge-success">Operational</span></td>
+                                <td>Nov 1, 2024</td>
+                                <td>Feb 1, 2025</td>
+                                <td><span class="badge badge-success">Current</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>EQ-002</strong></td>
+                                <td>Capsule Filler #1</td>
+                                <td>Production Area B</td>
+                                <td><span class="badge badge-success">Operational</span></td>
+                                <td>Oct 15, 2024</td>
+                                <td>Jan 15, 2025</td>
+                                <td><span class="badge badge-success">Current</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>EQ-003</strong></td>
+                                <td>HPLC System #2</td>
+                                <td>QC Lab</td>
+                                <td><span class="badge badge-success">Operational</span></td>
+                                <td>Dec 1, 2024</td>
+                                <td>Mar 1, 2025</td>
+                                <td><span class="badge badge-success">Current</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>EQ-004</strong></td>
+                                <td>Balance #5</td>
+                                <td>QC Lab</td>
+                                <td><span class="badge badge-warning">Maintenance</span></td>
+                                <td>Sep 20, 2024</td>
+                                <td>Dec 20, 2024</td>
+                                <td><span class="badge badge-warning">Due Soon</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>EQ-005</strong></td>
+                                <td>Autoclave #1</td>
+                                <td>Sterile Area</td>
+                                <td><span class="badge badge-success">Operational</span></td>
+                                <td>Nov 10, 2024</td>
+                                <td>Feb 10, 2025</td>
+                                <td><span class="badge badge-success">Current</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alerts & Notifications -->
+    <section class="container">
+        <h2 class="mb-3">Active Alerts & Notifications</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h4>Recent Alerts</h4>
+                <div class="mt-3">
+                    <div class="alert alert-success">
+                        <strong>✓ Resolved:</strong> Temperature excursion in Clean Room B<br>
+                        <small>Resolved 2 hours ago</small>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>ℹ Info:</strong> Scheduled maintenance for Line 3 tomorrow<br>
+                        <small>Posted 5 hours ago</small>
+                    </div>
+                    <div class="alert alert-success">
+                        <strong>✓ Resolved:</strong> Particle count spike in Grade A area<br>
+                        <small>Resolved 1 day ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Upcoming Maintenance</h4>
+                <div class="mt-3">
+                    <div class="mb-3" style="border-left: 3px solid var(--warning); padding-left: 1rem;">
+                        <strong>EQ-004 - Balance #5</strong><br>
+                        <small style="color: var(--gray-600);">Calibration due: Dec 20, 2024</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--info); padding-left: 1rem;">
+                        <strong>HVAC System - Clean Room A</strong><br>
+                        <small style="color: var(--gray-600);">Filter change: Dec 25, 2024</small>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid var(--info); padding-left: 1rem;">
+                        <strong>EQ-001 - Tablet Press #1</strong><br>
+                        <small style="color: var(--gray-600);">Preventive maintenance: Jan 5, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="standards.html#gmp">GMP Compliance</a></li>
+                    <li><a href="standards.html#fda">FDA Regulations</a></li>
+                    <li><a href="standards.html#iso">ISO Standards</a></li>
+                    <li><a href="standards.html#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Generate time labels for 24 hours
+            const timeLabels = [];
+            for (let i = 0; i < 24; i++) {
+                timeLabels.push(i + ':00');
+            }
+
+            // Temperature Chart
+            new Chart(document.getElementById('temperatureChart'), {
+                type: 'line',
+                data: {
+                    labels: timeLabels,
+                    datasets: [{
+                        label: 'Grade A',
+                        data: generateRandomData(24, 20.5, 21.8),
+                        borderColor: chartColors.primary,
+                        backgroundColor: 'rgba(0, 102, 204, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Grade B',
+                        data: generateRandomData(24, 21.0, 22.5),
+                        borderColor: chartColors.secondary,
+                        backgroundColor: 'rgba(0, 163, 163, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { min: 18, max: 25 } }
+                }
+            });
+
+            // Humidity Chart
+            new Chart(document.getElementById('humidityChart'), {
+                type: 'line',
+                data: {
+                    labels: timeLabels,
+                    datasets: [{
+                        label: 'Humidity %',
+                        data: generateRandomData(24, 40, 50),
+                        borderColor: chartColors.success,
+                        backgroundColor: 'rgba(0, 200, 83, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { min: 30, max: 60 } }
+                }
+            });
+
+            // Pressure Chart
+            new Chart(document.getElementById('pressureChart'), {
+                type: 'line',
+                data: {
+                    labels: timeLabels,
+                    datasets: [{
+                        label: 'Differential Pressure (Pa)',
+                        data: generateRandomData(24, 12, 18),
+                        borderColor: chartColors.warning,
+                        backgroundColor: 'rgba(255, 145, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { min: 5, max: 25 } }
+                }
+            });
+
+            // Particle Count Chart
+            new Chart(document.getElementById('particleChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Grade A', 'Grade B', 'Grade C', 'Grade D'],
+                    datasets: [{
+                        label: 'Particle Count (0.5μm)',
+                        data: [2500, 35000, 350000, 3500000],
+                        backgroundColor: [chartColors.success, chartColors.primary, chartColors.warning, chartColors.danger]
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    scales: { y: { type: 'logarithmic' } }
+                }
+            });
+
+            // Process Temperature Chart
+            new Chart(document.getElementById('processTemperatureChart'), {
+                type: 'line',
+                data: {
+                    labels: timeLabels.slice(0, 12),
+                    datasets: [{
+                        label: 'Line 1 Temperature',
+                        data: generateRandomData(12, 63, 67),
+                        borderColor: chartColors.danger,
+                        backgroundColor: 'rgba(229, 57, 53, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Target',
+                        data: Array(12).fill(65),
+                        borderColor: chartColors.gray,
+                        borderDash: [5, 5],
+                        pointRadius: 0
+                    }]
+                },
+                options: chartDefaults
+            });
+
+            // Utilization Chart
+            new Chart(document.getElementById('utilizationChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Running', 'Idle', 'Maintenance', 'Changeover'],
+                    datasets: [{
+                        data: [75, 15, 5, 5],
+                        backgroundColor: [chartColors.success, chartColors.gray, chartColors.warning, chartColors.info]
+                    }]
+                },
+                options: chartDefaults
+            });
+        });
+    </script>
+</body>
+
+</html>

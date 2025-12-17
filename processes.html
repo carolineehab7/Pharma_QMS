@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive QMS Processes for Pharmaceutical Production">
+    <title>QMS Processes | Pharmaceutical QMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="processes.html" class="nav-link active">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 3rem 1.5rem;">
+        <div class="hero-content">
+            <h1>QMS Processes</h1>
+            <p>Comprehensive quality management processes ensuring pharmaceutical excellence</p>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Core QMS Processes</h2>
+            <p>Systematic procedures ensuring quality, compliance, and continuous improvement</p>
+        </div>
+
+        <!-- Document Control -->
+        <div class="card mb-4" id="document-control">
+            <div class="card-header">
+                <div class="card-icon">📋</div>
+                <div>
+                    <h3 class="card-title">Document Control</h3>
+                    <span class="badge badge-primary">Critical Process</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Document Control ensures that all quality-related documents are properly created, reviewed, approved,
+                    distributed, and maintained throughout their lifecycle. This process is fundamental to GMP
+                    compliance and regulatory requirements.</p>
+
+                <h4 class="mt-3">Key Components</h4>
+                <ul>
+                    <li><strong>Document Creation:</strong> Standardized templates and authoring procedures</li>
+                    <li><strong>Review & Approval:</strong> Multi-level review workflow with electronic signatures</li>
+                    <li><strong>Version Control:</strong> Automated versioning with change tracking</li>
+                    <li><strong>Distribution:</strong> Controlled access and distribution to authorized personnel</li>
+                    <li><strong>Archival:</strong> Long-term retention per regulatory requirements</li>
+                </ul>
+
+                <h4 class="mt-3">Process Flow</h4>
+                <div class="mermaid">
+                    graph LR
+                    A[Document Request] --> B[Draft Creation]
+                    B --> C[Technical Review]
+                    C --> D{Approved?}
+                    D -->|No| B
+                    D -->|Yes| E[QA Review]
+                    E --> F{Approved?}
+                    F -->|No| B
+                    F -->|Yes| G[Final Approval]
+                    G --> H[Distribution]
+                    H --> I[Training]
+                    I --> J[Implementation]
+                </div>
+
+                <h4 class="mt-3">Compliance Requirements</h4>
+                <div class="grid grid-2 mt-2">
+                    <div class="alert alert-info">
+                        <strong>21 CFR Part 11:</strong> Electronic records and signatures
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>ICH Q10:</strong> Pharmaceutical quality system
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Change Control -->
+        <div class="card mb-4" id="change-control">
+            <div class="card-header">
+                <div class="card-icon">🔄</div>
+                <div>
+                    <h3 class="card-title">Change Control</h3>
+                    <span class="badge badge-warning">High Impact</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Change Control is a systematic approach to managing all changes to processes, equipment, materials,
+                    and documentation. It ensures that changes are properly evaluated, approved, implemented, and
+                    verified.</p>
+
+                <h4 class="mt-3">Change Categories</h4>
+                <div class="grid grid-3 mt-2">
+                    <div class="card card-glass">
+                        <h5>Minor Changes</h5>
+                        <p>Low impact, expedited approval</p>
+                        <span class="badge badge-success">Fast Track</span>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>Major Changes</h5>
+                        <p>Significant impact, full assessment</p>
+                        <span class="badge badge-warning">Standard Review</span>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>Critical Changes</h5>
+                        <p>High risk, extensive validation</p>
+                        <span class="badge badge-danger">Extended Review</span>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">Impact Assessment Areas</h4>
+                <ul>
+                    <li>Product Quality & Safety</li>
+                    <li>Regulatory Compliance</li>
+                    <li>Validation Status</li>
+                    <li>Documentation Requirements</li>
+                    <li>Training Needs</li>
+                    <li>Supply Chain Impact</li>
+                </ul>
+
+                <h4 class="mt-3">Process Flow</h4>
+                <div class="mermaid">
+                    graph TB
+                    A[Change Request] --> B[Impact Assessment]
+                    B --> C[Risk Analysis]
+                    C --> D{Risk Level}
+                    D -->|Low| E[Expedited Approval]
+                    D -->|Medium/High| F[Full Review]
+                    F --> G[Cross-Functional Review]
+                    G --> H[QA Approval]
+                    E --> H
+                    H --> I[Implementation Plan]
+                    I --> J[Execute Change]
+                    J --> K[Verification]
+                    K --> L[Effectiveness Check]
+                    L --> M[Close Change]
+                </div>
+            </div>
+        </div>
+
+        <!-- Deviation Management -->
+        <div class="card mb-4" id="deviation-management">
+            <div class="card-header">
+                <div class="card-icon">⚠️</div>
+                <div>
+                    <h3 class="card-title">Deviation Management</h3>
+                    <span class="badge badge-danger">Critical Process</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Deviation Management handles any departure from approved procedures, specifications, or standards.
+                    This process ensures proper investigation, root cause analysis, and implementation of corrective and
+                    preventive actions.</p>
+
+                <div class="alert alert-warning mt-3">
+                    <strong>Featured Challenge:</strong> This is our identified challenging point. Visit the <a
+                        href="deviation-management.html">Deviation & CAPA Management</a> page for our comprehensive
+                    solution.
+                </div>
+
+                <h4 class="mt-3">Deviation Classification</h4>
+                <div class="table-container mt-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Description</th>
+                                <th>Investigation Timeline</th>
+                                <th>QA Involvement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-danger">Critical</span></td>
+                                <td>Impact on product quality/safety</td>
+                                <td>Immediate (24 hours)</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-warning">Major</span></td>
+                                <td>Significant GMP deviation</td>
+                                <td>5 business days</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-info">Minor</span></td>
+                                <td>Low impact, procedural</td>
+                                <td>10 business days</td>
+                                <td>Review only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <a href="deviation-management.html" class="btn btn-primary mt-3">Explore Full Solution →</a>
+            </div>
+        </div>
+
+        <!-- Quality Control Testing -->
+        <div class="card mb-4" id="quality-control">
+            <div class="card-header">
+                <div class="card-icon">🧪</div>
+                <div>
+                    <h3 class="card-title">Quality Control Testing</h3>
+                    <span class="badge badge-success">Core Process</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Quality Control Testing ensures that raw materials, in-process materials, and finished products meet
+                    established specifications and quality standards.</p>
+
+                <h4 class="mt-3">Testing Categories</h4>
+                <div class="grid grid-2 mt-2">
+                    <div>
+                        <h5>Raw Material Testing</h5>
+                        <ul>
+                            <li>Identity testing</li>
+                            <li>Purity analysis</li>
+                            <li>Potency determination</li>
+                            <li>Microbial testing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Finished Product Testing</h5>
+                        <ul>
+                            <li>Assay and content uniformity</li>
+                            <li>Dissolution testing</li>
+                            <li>Stability testing</li>
+                            <li>Sterility testing (if applicable)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">OOS/OOT Investigations</h4>
+                <p>Out-of-Specification (OOS) and Out-of-Trend (OOT) results require thorough investigation:</p>
+                <div class="mermaid">
+                    graph LR
+                    A[OOS Result] --> B[Initial Review]
+                    B --> C[Laboratory Investigation]
+                    C --> D{Lab Error?}
+                    D -->|Yes| E[Document & Retest]
+                    D -->|No| F[Full Investigation]
+                    F --> G[Root Cause Analysis]
+                    G --> H[CAPA Implementation]
+                    H --> I[Batch Disposition]
+                </div>
+            </div>
+        </div>
+
+        <!-- Batch Record Review -->
+        <div class="card mb-4" id="batch-review">
+            <div class="card-header">
+                <div class="card-icon">📊</div>
+                <div>
+                    <h3 class="card-title">Batch Record Review</h3>
+                    <span class="badge badge-primary">GMP Critical</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Batch Record Review is a systematic examination of all production and control records to ensure
+                    compliance with approved procedures and specifications before batch release.</p>
+
+                <h4 class="mt-3">Review Checkpoints</h4>
+                <div class="grid grid-2 mt-2">
+                    <div class="card card-glass">
+                        <h5>✓ Documentation Completeness</h5>
+                        <p>All required signatures, dates, and entries present</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>✓ Material Reconciliation</h5>
+                        <p>Input vs. output quantities within acceptable limits</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>✓ Process Parameters</h5>
+                        <p>All critical parameters within specifications</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>✓ Deviations & Investigations</h5>
+                        <p>All deviations documented and resolved</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">Release Criteria</h4>
+                <ul>
+                    <li>All QC test results meet specifications</li>
+                    <li>Batch record complete and accurate</li>
+                    <li>No unresolved deviations</li>
+                    <li>Environmental monitoring acceptable</li>
+                    <li>Equipment qualification current</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Supplier Qualification -->
+        <div class="card mb-4" id="supplier-qualification">
+            <div class="card-header">
+                <div class="card-icon">🤝</div>
+                <div>
+                    <h3 class="card-title">Supplier Qualification</h3>
+                    <span class="badge badge-info">Supply Chain</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Supplier Qualification ensures that all suppliers of materials, components, and services meet quality
+                    standards and regulatory requirements.</p>
+
+                <h4 class="mt-3">Qualification Stages</h4>
+                <div class="mermaid">
+                    graph LR
+                    A[Supplier Identification] --> B[Initial Assessment]
+                    B --> C[Audit]
+                    C --> D[Qualification]
+                    D --> E[Approved Supplier]
+                    E --> F[Ongoing Monitoring]
+                    F --> G[Re-qualification]
+                    G --> E
+                </div>
+
+                <h4 class="mt-3">Assessment Criteria</h4>
+                <ul>
+                    <li>Quality Management System</li>
+                    <li>Regulatory compliance history</li>
+                    <li>Technical capabilities</li>
+                    <li>Financial stability</li>
+                    <li>Supply chain reliability</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Training Management -->
+        <div class="card mb-4" id="training">
+            <div class="card-header">
+                <div class="card-icon">🎓</div>
+                <div>
+                    <h3 class="card-title">Training Management</h3>
+                    <span class="badge badge-success">Personnel Development</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Training Management ensures that all personnel are properly qualified and trained to perform their
+                    assigned duties in accordance with GMP requirements.</p>
+
+                <h4 class="mt-3">Training Categories</h4>
+                <div class="grid grid-3 mt-2">
+                    <div class="card card-glass">
+                        <h5>GMP Training</h5>
+                        <p>Basic and advanced GMP principles</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>SOP Training</h5>
+                        <p>Procedure-specific training</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>On-the-Job Training</h5>
+                        <p>Practical skills development</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">Training Lifecycle</h4>
+                <ul>
+                    <li><strong>Needs Assessment:</strong> Identify training requirements</li>
+                    <li><strong>Training Delivery:</strong> Classroom, e-learning, or hands-on</li>
+                    <li><strong>Competency Assessment:</strong> Verify understanding and skills</li>
+                    <li><strong>Documentation:</strong> Maintain training records</li>
+                    <li><strong>Periodic Retraining:</strong> Refresh knowledge and skills</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Equipment Qualification -->
+        <div class="card mb-4" id="equipment-qualification">
+            <div class="card-header">
+                <div class="card-icon">⚙️</div>
+                <div>
+                    <h3 class="card-title">Equipment Qualification</h3>
+                    <span class="badge badge-primary">Validation</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>Equipment Qualification ensures that equipment is suitable for its intended use and operates reliably
+                    within specified parameters.</p>
+
+                <h4 class="mt-3">Qualification Phases</h4>
+                <div class="table-container mt-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Description</th>
+                                <th>Key Activities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DQ</strong></td>
+                                <td>Design Qualification</td>
+                                <td>Verify design meets requirements</td>
+                            </tr>
+                            <tr>
+                                <td><strong>IQ</strong></td>
+                                <td>Installation Qualification</td>
+                                <td>Verify correct installation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OQ</strong></td>
+                                <td>Operational Qualification</td>
+                                <td>Verify operational parameters</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PQ</strong></td>
+                                <td>Performance Qualification</td>
+                                <td>Verify consistent performance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="mt-3">Maintenance & Calibration</h4>
+                <p>Ongoing programs ensure continued qualification status:</p>
+                <ul>
+                    <li>Preventive maintenance schedules</li>
+                    <li>Calibration programs</li>
+                    <li>Performance monitoring</li>
+                    <li>Periodic re-qualification</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="standards.html#gmp">GMP Compliance</a></li>
+                    <li><a href="standards.html#fda">FDA Regulations</a></li>
+                    <li><a href="standards.html#iso">ISO Standards</a></li>
+                    <li><a href="standards.html#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Mermaid for flowcharts
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+
+</html>

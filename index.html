@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Quality Management System for Pharmaceutical Production - Interactive QMS platform showcasing processes, standards, and compliance monitoring">
+    <title>Pharmaceutical QMS | Quality Management System</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="processes.html" class="nav-link">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Quality Management System</h1>
+            <p>Comprehensive QMS platform for pharmaceutical production excellence, ensuring compliance with GMP, FDA,
+                and ISO standards</p>
+            <div class="hero-buttons">
+                <a href="processes.html" class="btn btn-primary">Explore QMS Processes</a>
+                <a href="dashboard.html" class="btn btn-secondary">View Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">98.5%</div>
+                <div class="stat-label">First Pass Yield</div>
+                <div class="stat-trend trend-up">↑ 2.3% from last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Active Deviations</div>
+                <div class="stat-trend trend-down">↓ 5 from last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">95%</div>
+                <div class="stat-label">CAPA On-Time Closure</div>
+                <div class="stat-trend trend-up">↑ 8% from last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Training Compliance</div>
+                <div class="stat-trend trend-up">Maintained</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QMS Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quality Management System Overview</h2>
+                <p>Our comprehensive QMS ensures pharmaceutical excellence through systematic processes and continuous
+                    improvement</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📋</div>
+                        <h3 class="card-title">Document Control</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Centralized document management system ensuring version control, approval workflows, and
+                            regulatory compliance for all quality documents.</p>
+                        <a href="processes.html#document-control" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🔄</div>
+                        <h3 class="card-title">Change Control</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Structured change management process with impact assessment, risk evaluation, and
+                            cross-functional approval mechanisms.</p>
+                        <a href="processes.html#change-control" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">⚠️</div>
+                        <h3 class="card-title">Deviation Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Comprehensive deviation tracking with root cause analysis, CAPA implementation, and
+                            effectiveness verification.</p>
+                        <a href="deviation-management.html" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🧪</div>
+                        <h3 class="card-title">Quality Control</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Rigorous testing protocols, sampling procedures, and release criteria ensuring product
+                            quality and patient safety.</p>
+                        <a href="processes.html#quality-control" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3 class="card-title">Batch Record Review</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Systematic review of production documentation ensuring compliance with approved procedures
+                            and specifications.</p>
+                        <a href="processes.html#batch-review" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🎓</div>
+                        <h3 class="card-title">Training Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Personnel qualification tracking, competency assessment, and continuous education programs
+                            for all staff.</p>
+                        <a href="processes.html#training" class="btn btn-outline mt-3">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Compliance -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Regulatory Standards & Compliance</h2>
+                <p>Adherence to international pharmaceutical quality standards</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card card-glass">
+                    <h4>GMP</h4>
+                    <p>Good Manufacturing Practice</p>
+                    <span class="badge badge-success">21 CFR Part 211</span>
+                </div>
+                <div class="card card-glass">
+                    <h4>FDA</h4>
+                    <p>Food & Drug Administration</p>
+                    <span class="badge badge-primary">Compliant</span>
+                </div>
+                <div class="card card-glass">
+                    <h4>ISO 9001</h4>
+                    <p>Quality Management Systems</p>
+                    <span class="badge badge-success">Certified</span>
+                </div>
+                <div class="card card-glass">
+                    <h4>ICH Guidelines</h4>
+                    <p>Q7, Q9, Q10</p>
+                    <span class="badge badge-info">Implemented</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="standards.html" class="btn btn-primary">View All Standards →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenging Point Highlight -->
+    <section class="section">
+        <div class="container">
+            <div class="card" style="background: var(--gradient-primary); color: var(--white);">
+                <div class="card-body">
+                    <h2 style="color: var(--white);">Featured: Deviation & CAPA Management System</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.95; color: azure;">Discover how we tackle one of the most
+                        challenging aspects of pharmaceutical QMS - managing deviations and implementing effective
+                        corrective and preventive actions.</p>
+
+                    <div class="grid grid-3 mt-4">
+                        <div>
+                            <h3 style="color: var(--white);">The Challenge</h3>
+                            <p style="opacity: 0.9; color: azure;">Complex tracking, investigation, and trend analysis
+                                across multiple departments</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--white);">Our Solution</h3>
+                            <p style="opacity: 0.9; color: azure;">Interactive system with automated workflows, risk
+                                assessment, and analytics</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--white);">Results</h3>
+                            <p style="opacity: 0.9; color: azure;">95% on-time closure rate and 40% reduction in
+                                recurring deviations</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="deviation-management.html" class="btn btn-primary">Explore Solution →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Preview -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Real-Time Quality Monitoring</h2>
+                <p>Live dashboards and analytics for proactive quality management</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Quality Metrics Trend</h3>
+                    </div>
+                    <canvas id="qualityTrendChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Deviation Distribution</h3>
+                    </div>
+                    <canvas id="deviationChart"></canvas>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="dashboard.html" class="btn btn-primary">View Full Dashboard →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Platform Features</h2>
+                <p>Comprehensive tools for pharmaceutical quality excellence</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>📈 Interactive Dashboards</h3>
+                    <p>Real-time visualization of quality metrics, KPIs, and compliance status with customizable views
+                        and drill-down capabilities.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 Root Cause Analysis</h3>
+                    <p>Integrated tools including 5 Whys, Fishbone diagrams, and trend analysis for effective
+                        problem-solving.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Access QMS data and workflows from any device - desktop, tablet, or mobile - with optimized
+                        interfaces.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📄 Automated Reporting</h3>
+                    <p>Generate comprehensive quality reports, audit summaries, and compliance documentation with one
+                        click.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔔 Smart Alerts</h3>
+                    <p>Proactive notifications for critical events, approaching deadlines, and out-of-specification
+                        results.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔒 Audit Trail</h3>
+                    <p>Complete traceability with electronic signatures, timestamps, and comprehensive change history.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="standards.html#gmp">GMP Compliance</a></li>
+                    <li><a href="standards.html#fda">FDA Regulations</a></li>
+                    <li><a href="standards.html#iso">ISO Standards</a></li>
+                    <li><a href="standards.html#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize charts on homepage
+        document.addEventListener('DOMContentLoaded', function () {
+            // Quality Trend Chart
+            const qualityCtx = document.getElementById('qualityTrendChart');
+            if (qualityCtx) {
+                new Chart(qualityCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'First Pass Yield (%)',
+                            data: [96.2, 97.1, 96.8, 97.5, 98.1, 98.5],
+                            borderColor: '#0066cc',
+                            backgroundColor: 'rgba(0, 102, 204, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }, {
+                            label: 'Right First Time (%)',
+                            data: [94.5, 95.2, 95.8, 96.3, 97.0, 97.5],
+                            borderColor: '#00a3a3',
+                            backgroundColor: 'rgba(0, 163, 163, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 90,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Deviation Distribution Chart
+            const deviationCtx = document.getElementById('deviationChart');
+            if (deviationCtx) {
+                new Chart(deviationCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Documentation', 'Equipment', 'Material', 'Process', 'Other'],
+                        datasets: [{
+                            data: [25, 20, 15, 30, 10],
+                            backgroundColor: [
+                                '#0066cc',
+                                '#00a3a3',
+                                '#00c853',
+                                '#ff9100',
+                                '#7b1fa2'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

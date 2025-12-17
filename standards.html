@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pharmaceutical Standards and Regulatory Compliance">
+    <title>Standards & Compliance | Pharmaceutical QMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏥</span>
+                <span>Pharma QMS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="processes.html" class="nav-link">QMS Processes</a></li>
+                <li><a href="standards.html" class="nav-link active">Standards</a></li>
+                <li><a href="deviation-management.html" class="nav-link">Deviation & CAPA</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="monitoring.html" class="nav-link">Monitoring</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 3rem 1.5rem;">
+        <div class="hero-content">
+            <h1>Standards & Compliance</h1>
+            <p>Adherence to international pharmaceutical quality and regulatory standards</p>
+        </div>
+    </section>
+
+    <!-- Standards Overview -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Regulatory Framework</h2>
+            <p>Our QMS complies with global pharmaceutical standards and regulations</p>
+        </div>
+
+        <!-- GMP Standards -->
+        <div class="card mb-4" id="gmp">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);">📜</div>
+                <div>
+                    <h3 class="card-title">Good Manufacturing Practice (GMP)</h3>
+                    <span class="badge badge-success">21 CFR Part 211</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>GMP is a system for ensuring that products are consistently produced and controlled according to
+                    quality standards. It is designed to minimize the risks involved in pharmaceutical production that
+                    cannot be eliminated through testing the final product.</p>
+
+                <h4 class="mt-3">Key GMP Principles</h4>
+                <div class="grid grid-2 mt-2">
+                    <div class="card card-glass">
+                        <h5>1. Quality Management</h5>
+                        <p>Comprehensive quality system covering all aspects of production</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>2. Personnel</h5>
+                        <p>Qualified and trained staff with defined responsibilities</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>3. Premises & Equipment</h5>
+                        <p>Suitable facilities and properly maintained equipment</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>4. Documentation</h5>
+                        <p>Clear procedures and accurate record-keeping</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>5. Production</h5>
+                        <p>Controlled processes following approved procedures</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>6. Quality Control</h5>
+                        <p>Testing and verification of materials and products</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">21 CFR Part 211 Subparts</h4>
+                <div class="table-container mt-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subpart</th>
+                                <th>Topic</th>
+                                <th>Key Requirements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>A</strong></td>
+                                <td>General Provisions</td>
+                                <td>Scope and definitions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>B</strong></td>
+                                <td>Organization & Personnel</td>
+                                <td>Qualifications, training, hygiene</td>
+                            </tr>
+                            <tr>
+                                <td><strong>C</strong></td>
+                                <td>Buildings & Facilities</td>
+                                <td>Design, maintenance, sanitation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D</strong></td>
+                                <td>Equipment</td>
+                                <td>Design, maintenance, cleaning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>E</strong></td>
+                                <td>Control of Components</td>
+                                <td>Receipt, testing, storage</td>
+                            </tr>
+                            <tr>
+                                <td><strong>F</strong></td>
+                                <td>Production & Process Controls</td>
+                                <td>Written procedures, in-process controls</td>
+                            </tr>
+                            <tr>
+                                <td><strong>G</strong></td>
+                                <td>Packaging & Labeling</td>
+                                <td>Controls and inspection</td>
+                            </tr>
+                            <tr>
+                                <td><strong>I</strong></td>
+                                <td>Laboratory Controls</td>
+                                <td>Testing and specifications</td>
+                            </tr>
+                            <tr>
+                                <td><strong>J</strong></td>
+                                <td>Records & Reports</td>
+                                <td>Documentation requirements</td>
+                            </tr>
+                            <tr>
+                                <td><strong>K</strong></td>
+                                <td>Returned & Salvaged Products</td>
+                                <td>Handling procedures</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FDA Regulations -->
+        <div class="card mb-4" id="fda">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%);">🏛️</div>
+                <div>
+                    <h3 class="card-title">FDA Regulations</h3>
+                    <span class="badge badge-primary">US Regulatory Authority</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>The Food and Drug Administration (FDA) regulates pharmaceutical manufacturing in the United States
+                    through comprehensive regulations ensuring drug safety, efficacy, and quality.</p>
+
+                <h4 class="mt-3">Key FDA Regulations</h4>
+                <div class="grid grid-2 mt-2">
+                    <div>
+                        <h5>21 CFR Part 11</h5>
+                        <p><strong>Electronic Records & Signatures</strong></p>
+                        <ul>
+                            <li>Validation of computer systems</li>
+                            <li>Audit trail requirements</li>
+                            <li>Electronic signature controls</li>
+                            <li>Data integrity assurance</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>21 CFR Part 210</h5>
+                        <p><strong>Current Good Manufacturing Practice</strong></p>
+                        <ul>
+                            <li>General GMP regulations</li>
+                            <li>Scope and applicability</li>
+                            <li>Definitions and interpretations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">FDA Inspection Readiness</h4>
+                <div class="alert alert-info mt-2">
+                    <strong>Compliance Checklist:</strong>
+                    <ul class="mt-2">
+                        <li>✓ All SOPs current and followed</li>
+                        <li>✓ Training records up to date</li>
+                        <li>✓ Deviation investigations complete</li>
+                        <li>✓ Equipment calibration current</li>
+                        <li>✓ Batch records complete and reviewed</li>
+                        <li>✓ CAPA system effective</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ISO Standards -->
+        <div class="card mb-4" id="iso">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #00a3a3 0%, #007a7a 100%);">🌐</div>
+                <div>
+                    <h3 class="card-title">ISO Standards</h3>
+                    <span class="badge badge-success">International Standards</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>ISO 9001: Quality Management Systems</h4>
+                <p>ISO 9001 provides a framework for quality management applicable to any organization. It focuses on
+                    meeting customer requirements and enhancing satisfaction.</p>
+
+                <h5 class="mt-3">Seven Quality Management Principles</h5>
+                <div class="grid grid-2 mt-2">
+                    <div class="card card-glass">
+                        <h6>1. Customer Focus</h6>
+                        <p>Meeting customer requirements and exceeding expectations</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>2. Leadership</h6>
+                        <p>Establishing unity of purpose and direction</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>3. Engagement of People</h6>
+                        <p>Competent, empowered, and engaged people</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>4. Process Approach</h6>
+                        <p>Understanding and managing interrelated processes</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>5. Improvement</h6>
+                        <p>Continual improvement as a permanent objective</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>6. Evidence-based Decision Making</h6>
+                        <p>Decisions based on analysis of data and information</p>
+                    </div>
+                    <div class="card card-glass">
+                        <h6>7. Relationship Management</h6>
+                        <p>Managing relationships with interested parties</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-4">ISO 13485: Medical Devices QMS</h4>
+                <p>Specifies requirements for a quality management system where an organization needs to demonstrate its
+                    ability to provide medical devices and related services that consistently meet customer and
+                    applicable regulatory requirements.</p>
+
+                <div class="alert alert-success mt-2">
+                    <strong>Certification Status:</strong> Our facility maintains ISO 9001:2015 and ISO 13485:2016
+                    certifications with annual surveillance audits.
+                </div>
+            </div>
+        </div>
+
+        <!-- ICH Guidelines -->
+        <div class="card mb-4" id="ich">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);">📘</div>
+                <div>
+                    <h3 class="card-title">ICH Guidelines</h3>
+                    <span class="badge badge-info">International Harmonization</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Overview</h4>
+                <p>The International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human
+                    Use (ICH) brings together regulatory authorities and pharmaceutical industry to discuss scientific
+                    and technical aspects of drug registration.</p>
+
+                <h4 class="mt-3">Quality Guidelines (Q Series)</h4>
+                <div class="table-container mt-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Guideline</th>
+                                <th>Title</th>
+                                <th>Focus Area</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Q7</strong></td>
+                                <td>Good Manufacturing Practice for Active Pharmaceutical Ingredients</td>
+                                <td>API production quality</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q8</strong></td>
+                                <td>Pharmaceutical Development</td>
+                                <td>Quality by Design (QbD)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q9</strong></td>
+                                <td>Quality Risk Management</td>
+                                <td>Risk-based approach</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q10</strong></td>
+                                <td>Pharmaceutical Quality System</td>
+                                <td>Integrated QMS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q11</strong></td>
+                                <td>Development and Manufacture of Drug Substances</td>
+                                <td>API lifecycle</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Q12</strong></td>
+                                <td>Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle
+                                    Management</td>
+                                <td>Post-approval changes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="mt-3">ICH Q9: Quality Risk Management</h4>
+                <p>Provides principles and examples of tools for quality risk management that can be applied to
+                    different aspects of pharmaceutical quality.</p>
+
+                <div class="grid grid-3 mt-2">
+                    <div class="card card-glass">
+                        <h5>Risk Assessment</h5>
+                        <ul>
+                            <li>Risk identification</li>
+                            <li>Risk analysis</li>
+                            <li>Risk evaluation</li>
+                        </ul>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>Risk Control</h5>
+                        <ul>
+                            <li>Risk reduction</li>
+                            <li>Risk acceptance</li>
+                        </ul>
+                    </div>
+                    <div class="card card-glass">
+                        <h5>Risk Communication</h5>
+                        <ul>
+                            <li>Risk review</li>
+                            <li>Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="mt-3">ICH Q10: Pharmaceutical Quality System</h4>
+                <p>Describes a comprehensive model for an effective pharmaceutical quality system based on ISO quality
+                    concepts and includes applicable GMP regulations.</p>
+
+                <div class="alert alert-info mt-2">
+                    <strong>Key Elements:</strong>
+                    <ul class="mt-2">
+                        <li>Process performance and product quality monitoring</li>
+                        <li>Corrective and preventive action (CAPA) system</li>
+                        <li>Change management</li>
+                        <li>Management review of process performance and product quality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compliance Monitoring -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-icon">📊</div>
+                <div>
+                    <h3 class="card-title">Compliance Monitoring</h3>
+                    <span class="badge badge-success">Active Tracking</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4>Current Compliance Status</h4>
+
+                <div class="stats-grid mt-3">
+                    <div class="stat-card">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">GMP Compliance</div>
+                        <div class="stat-trend trend-up">Maintained</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">FDA 483 Observations</div>
+                        <div class="stat-trend trend-up">Last 2 years</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Audit Score</div>
+                        <div class="stat-trend trend-up">Last audit</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Days to CAPA Closure</div>
+                        <div class="stat-trend trend-up">Average</div>
+                    </div>
+                </div>
+
+                <h4 class="mt-4">Audit Schedule</h4>
+                <div class="table-container mt-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Audit Type</th>
+                                <th>Frequency</th>
+                                <th>Last Audit</th>
+                                <th>Next Audit</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Internal GMP Audit</td>
+                                <td>Quarterly</td>
+                                <td>Nov 2024</td>
+                                <td>Feb 2025</td>
+                                <td><span class="badge badge-success">On Schedule</span></td>
+                            </tr>
+                            <tr>
+                                <td>ISO Surveillance</td>
+                                <td>Annual</td>
+                                <td>Aug 2024</td>
+                                <td>Aug 2025</td>
+                                <td><span class="badge badge-success">Compliant</span></td>
+                            </tr>
+                            <tr>
+                                <td>Supplier Audit</td>
+                                <td>Risk-based</td>
+                                <td>Oct 2024</td>
+                                <td>Mar 2025</td>
+                                <td><span class="badge badge-info">Planned</span></td>
+                            </tr>
+                            <tr>
+                                <td>Regulatory Inspection</td>
+                                <td>As required</td>
+                                <td>Jan 2023</td>
+                                <td>TBD</td>
+                                <td><span class="badge badge-success">Ready</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pharmaceutical QMS</h3>
+                <p>Comprehensive Quality Management System for pharmaceutical production excellence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="processes.html">QMS Processes</a></li>
+                    <li><a href="standards.html">Standards</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="deviation-management.html">Deviation Management</a></li>
+                    <li><a href="monitoring.html">Environmental Monitoring</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Training Materials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Compliance</h3>
+                <ul class="footer-links">
+                    <li><a href="#gmp">GMP Compliance</a></li>
+                    <li><a href="#fda">FDA Regulations</a></li>
+                    <li><a href="#iso">ISO Standards</a></li>
+                    <li><a href="#ich">ICH Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pharmaceutical QMS. Quality Management System for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
