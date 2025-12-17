@@ -48,7 +48,7 @@
     <!-- Hero Section -->
     <section class="hero" style="padding: 3rem 1.5rem;">
         <div class="hero-content">
-            <h1>⚠️ Deviation & CAPA Management</h1>
+            <h1> Deviation & CAPA Management</h1>
             <p>Our solution to pharmaceutical QMS's most challenging process</p>
             <span class="badge"
                 style="background: var(--white); color: var(--primary-blue); font-size: 1rem; padding: 0.5rem 1rem;">Featured
@@ -56,45 +56,133 @@
         </div>
     </section>
 
-    <!-- The Challenge -->
-    <section class="container">
-        <div class="card" style="background: linear-gradient(135deg, #388d9c 0%, #207edd 100%); color: var(--white);">
-            <h2 style="color: var(--white);">🎯 The Challenge</h2>
-            <p style="font-size: 1.1rem; opacity: 0.95;">Deviation management is one of the most complex and critical
-                aspects of pharmaceutical quality management. Organizations face multiple challenges:</p>
+   <!-- The Challenge Section -->
+<section class="challenge-section">
+  <div class="challenge-card">
+    <header class="challenge-header">
+      <h2 style="color: #f4f8fc;">The Challenge</h2>
+      <p>
+        Deviation management is one of the most complex and critical aspects of
+        pharmaceutical quality management. Organizations face several operational
+        and compliance-related challenges.
+      </p>
+    </header>
 
-            <div class="grid grid-2 mt-3">
-                <div>
-                    <h4 style="color: var(--white);">❌ Common Pain Points</h4>
-                    <ul style="opacity: 0.9;">
-                        <li><strong>Complex Tracking:</strong> Managing deviations across multiple departments and
-                            production lines</li>
-                        <li><strong>Investigation Delays:</strong> Slow root cause analysis leading to extended closure
-                            times</li>
-                        <li><strong>CAPA Effectiveness:</strong> Difficulty verifying that corrective actions actually
-                            prevent recurrence</li>
-                        <li><strong>Trend Analysis:</strong> Manual processes make it hard to identify patterns and
-                            recurring issues</li>
-                        <li><strong>Regulatory Compliance:</strong> Meeting strict timelines and documentation
-                            requirements</li>
-                        <li><strong>Resource Allocation:</strong> Prioritizing investigations based on risk and impact
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: var(--white);">📊 Impact on Operations</h4>
-                    <ul style="opacity: 0.9;">
-                        <li>Average 30-45 days to close deviations</li>
-                        <li>40% of deviations are recurring issues</li>
-                        <li>Significant time spent on manual documentation</li>
-                        <li>Difficulty demonstrating CAPA effectiveness</li>
-                        <li>Risk of regulatory findings during inspections</li>
-                        <li>Lost productivity due to investigation overhead</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="challenge-grid">
+      <!-- Pain Points -->
+      <div class="info-card">
+        <h3 style="color: #f4f8fc;">Common Pain Points</h3>
+        <ul>
+          <li><strong>Complex Tracking:</strong> Managing deviations across multiple departments and production lines</li>
+          <li><strong>Investigation Delays:</strong> Slow root cause analysis extending closure timelines</li>
+          <li><strong>CAPA Effectiveness:</strong> Difficulty ensuring corrective actions prevent recurrence</li>
+          <li><strong>Trend Analysis:</strong> Limited visibility into recurring patterns due to manual processes</li>
+          <li><strong>Regulatory Compliance:</strong> Meeting strict documentation and timeline requirements</li>
+          <li><strong>Resource Allocation:</strong> Challenges prioritizing investigations based on risk</li>
+        </ul>
+      </div>
+
+      <!-- Operational Impact -->
+      <div class="info-card">
+        <h3 style="color: #f4f8fc;">Impact on Operations</h3>
+        <ul>
+          <li>Average deviation closure time: <strong>30–45 days</strong></li>
+          <li><strong>40%</strong> of deviations are recurring issues</li>
+          <li>High effort spent on manual documentation</li>
+          <li>Limited evidence of CAPA effectiveness</li>
+          <li>Increased risk during regulatory inspections</li>
+          <li>Reduced productivity due to investigation overhead</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Background */
+.challenge-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #f4f8fc 0%, #eaf1f8 100%);
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Card */
+.challenge-card {
+  max-width: 1100px;
+  width: 100%;
+  background: linear-gradient(135deg, #0a5494 50%, #068e75 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.challenge-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.challenge-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.challenge-header p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Info Cards */
+.info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 0.5rem;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .challenge-card {
+    padding: 2rem;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
     <!-- Our Solution -->
     <section class="section" style="background: var(--white);">
@@ -499,7 +587,7 @@
     <!-- Results -->
     <section class="container">
         <div class="card" style="background: var(--gradient-success); color: var(--white);">
-            <h2 style="color: var(--white);">🎉 Results Achieved</h2>
+            <h2 style="color: var(--white);">Results Achieved</h2>
             <p style="font-size: 1.1rem; opacity: 0.95;">Our integrated deviation and CAPA management system has
                 delivered measurable improvements:</p>
 
@@ -529,12 +617,12 @@
             <div class="mt-4">
                 <h4 style="color: var(--white);">Key Success Factors:</h4>
                 <ul style="opacity: 0.95; font-size: 1.05rem;">
-                    <li>✓ Automated workflows reduce manual effort by 60%</li>
-                    <li>✓ Risk-based prioritization ensures critical issues are addressed first</li>
-                    <li>✓ Integrated RCA tools improve investigation quality</li>
-                    <li>✓ Real-time analytics enable proactive trend identification</li>
-                    <li>✓ Mobile access increases submission and review efficiency</li>
-                    <li>✓ Effectiveness verification prevents recurrence</li>
+                    <li>Automated workflows reduce manual effort by 60%</li>
+                    <li>Risk-based prioritization ensures critical issues are addressed first</li>
+                    <li>Integrated RCA tools improve investigation quality</li>
+                    <li>Real-time analytics enable proactive trend identification</li>
+                    <li>Mobile access increases submission and review efficiency</li>
+                    <li>Effectiveness verification prevents recurrence</li>
                 </ul>
             </div>
         </div>
