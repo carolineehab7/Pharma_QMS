@@ -65,14 +65,14 @@
   --gray-900: #0d1117;
 
   /* Semantic Colors */
-  --success: #28a745;
+  --success: #2c66bc;
   --warning: #ffc107;
   --danger: #dc3545;
   --info: #17a2b8;
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #0066cc 0%, #00a3a3 100%);
-  --gradient-success: linear-gradient(135deg, #00c853 0%, #00a3a3 100%);
+  --gradient-success: linear-gradient(135deg, #2f68b8 50%, #28ca91 100%);
   --gradient-warning: linear-gradient(135deg, #ff9100 0%, #ffc107 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 
@@ -747,7 +747,7 @@ tbody tr:hover {
 }
 
 .alert-success {
-  background: rgba(40, 167, 69, 0.1);
+  background: rgba(9, 168, 46, 0.1);
   border-color: var(--success);
   color: #155724;
 }
