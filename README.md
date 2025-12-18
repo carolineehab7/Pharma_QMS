@@ -50,7 +50,7 @@ This is a comprehensive **Quality Management System (QMS)** website designed for
 - Equipment status and calibration tracking
 - Real-time alerts and notifications
 
-### 6. **Comprehensive Reporting**
+### 6. **Reporting**
 - Custom report generator
 - Automated scheduled reports
 - Multiple report categories (Quality, Deviation, Audit, Production, Laboratory, Training)
