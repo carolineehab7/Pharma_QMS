@@ -1,9 +1,5 @@
 # Pharmaceutical Production QMS Website
 
-![QMS Banner](https://img.shields.io/badge/QMS-Pharmaceutical%20Production-blue)
-![Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-Educational-orange)
-
 ## 📋 Project Overview
 
 This is a comprehensive **Quality Management System (QMS)** website designed for pharmaceutical production. The platform demonstrates QMS processes, regulatory standards compliance, and provides interactive tools for quality management, monitoring, and reporting.
@@ -76,74 +72,6 @@ This is a comprehensive **Quality Management System (QMS)** website designed for
 - **Flask** - RESTful API server framework
 - **Flask-CORS** - Cross-origin resource sharing support
 
-## 📁 Project Structure
-
-```
-Pharmaceutical Production/
-├── backend/
-│   ├── database.py               # Database connection and schema
-│   ├── api.py                    # Flask REST API server
-│   ├── init_db.py                # Database initialization script
-│   ├── requirements.txt          # Python dependencies
-│   └── qms_database.db           # SQLite database file (created on init)
-├── index.html                    # Homepage with QMS overview
-├── processes.html                # QMS processes detailed page
-├── standards.html                # Regulatory standards and compliance
-├── deviation-management.html     # Challenging point solution
-├── dashboard.html                # Real-time QMS dashboard
-├── monitoring.html               # Environmental and process monitoring
-├── reports.html                  # Reporting and analytics
-├── styles.css                    # Comprehensive design system
-├── script.js                     # Core JavaScript utilities
-├── api-client.js                 # Frontend API client library
-├── DATABASE.md                   # Database documentation
-├── README.md                     # This file
-└── REPORT.md                     # Submission report
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Edge, Safari)
-- **Python 3.7 or higher** (for backend)
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone or Download** the repository
-   ```bash
-   git clone [YOUR-GITHUB-REPO-URL]
-   cd "Pharmaceutical Production"
-   ```
-
-2. **Install Backend Dependencies**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-3. **Initialize Database**
-   ```bash
-   python init_db.py
-   ```
-   This creates the SQLite database and populates it with sample data.
-
-4. **Start API Server**
-   ```bash
-   python api.py
-   ```
-   The API server will start on `http://localhost:5000`
-
-5. **Open Frontend**
-   - Open `index.html` in your web browser
-   - The frontend will automatically connect to the API server
-   - Navigate through the website using the navigation menu
-
-### Quick Start (Frontend Only)
-If you want to run the frontend without the backend:
-- Simply open `index.html` in your browser
-- Note: Some features require the backend API to be running
-
 ## 📖 Usage Guide
 
 ### Homepage
@@ -197,11 +125,12 @@ If you want to run the frontend without the backend:
 
 ## 👥 Team Members
 
-| Name | Role | Contributions |
-|------|------|---------------|
-| [Team Member 1] | Full Stack Developer | Complete website development, all pages, CSS design system, JavaScript functionality |
-
-*Note: Update this section with actual team member names and their specific contributions*
+| Name | 
+|------|
+| Khadija Ali | 
+| Caroline Ehab | 
+| Mohamed Mostafa |
+| Hamza Ayman |
 
 ## 📊 Website Functions
 
@@ -220,26 +149,3 @@ If you want to run the frontend without the backend:
 - Form validation and error handling
 - Data export capabilities (JSON, CSV)
 
-## 🔗 GitHub Repository
-
-**Repository URL**: [YOUR-GITHUB-REPO-URL]
-
-## 📝 License
-
-This project is created for educational purposes as part of a Quality Management System course assignment.
-
-## 🙏 Acknowledgments
-
-- Chart.js for data visualization
-- Mermaid for flowchart diagrams
-- Google Fonts for typography
-- Pharmaceutical industry best practices and GMP guidelines
-
-## 📧 Contact
-
-For questions or feedback about this project, please contact [Your Contact Information]
-
----
-
-**Last Updated**: December 2024  
-**Version**: 1.0.0
